@@ -17,7 +17,11 @@ void rgb_matrix_indicators_user(void) {
             rgb_matrix_set_color(39, 0, 255, 255);
             rgb_matrix_set_color(25, 0, 255, 255);
 
+            // Reset
             rgb_matrix_set_color(13, 255, 0, 0);
+
+            // Lock screen
+            rgb_matrix_set_color(31, 255, 0, 0);
             break;
         case 2:
             rgblight_sethsv(43, 100, 100); // yellow
@@ -38,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_60_ansi(
         RESET,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
         _______, _______, KC_UP,   _______, _______, _______, KC_CALC, _______, KC_INS,  _______, KC_PSCR, KC_SLCK, KC_PAUS, _______,
-        _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGUP,          _______,
+        _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, KC_SLCK, KC_HOME, KC_PGUP,          _______,
         KC_MPRV,          KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, NK_TOGG, _______, _______, KC_END,  KC_PGDN,          KC_MNXT,
         _______, _______, _______,                            _______,                            _______, _______, _______, _______
     ),
