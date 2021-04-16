@@ -25,8 +25,12 @@ void rgb_matrix_indicators_user(void) {
             break;
         case 2:
             rgblight_sethsv(43, 100, 100); // yellow
-            rgb_matrix_set_color(15, 255, 155, 0); // Volume up   ]
-            rgb_matrix_set_color(16, 255, 155, 0); // Volume down [
+            rgb_matrix_set_color(15, 200, 0, 235); // Volume up   ]
+            rgb_matrix_set_color(16, 200, 0, 235); // Volume down [
+            rgb_matrix_set_color(37, 200, 0, 235); // W
+            rgb_matrix_set_color(38, 200, 0, 235); // A
+            rgb_matrix_set_color(39, 200, 0, 235); // S
+            rgb_matrix_set_color(25, 200, 0, 235); // D
             break; 
     }
 }
@@ -48,8 +52,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT_60_ansi(
         RESET,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_DEL,
-        _______, _______, KC_UP,   _______, _______, _______, KC_CALC, _______, KC_INS,  _______, KC_PSCR, KC_VOLD, KC_VOLU, _______,
-        _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGUP,          _______,
+        _______, _______, KC_MPLY, _______, _______, _______, KC_CALC, _______, KC_INS,  _______, KC_PSCR, KC_VOLD, KC_VOLU, _______,
+        _______, KC_MPRV, KC_MSTP, KC_MNXT, _______, _______, _______, _______, _______, _______, KC_HOME, KC_PGUP,          _______,
         KC_MPRV,          KC_VOLD, KC_VOLU, KC_MUTE, _______, _______, NK_TOGG, _______, _______, KC_END,  KC_PGDN,          KC_MNXT,
         _______, _______, _______,                            _______,                            _______, _______, _______, _______
     ),
